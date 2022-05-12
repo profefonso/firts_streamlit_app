@@ -17,7 +17,7 @@ def get_fruit_load_list():
 def insert_row_sbowflake(new_fruit):
   with my_cnx.cursor() as my_cur:
     my_cur.execute(f"insert into fruit_load_list values({new_fruit})")
-    return "Thanks for adding " + new fruit
+    return ("Thanks for adding " + new fruit)
     
 
 streamlit.title("My Parents New Healthy Diner")
