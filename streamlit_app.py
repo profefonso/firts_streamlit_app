@@ -10,12 +10,12 @@ def get_fruitvice_data(this_fruit_choise):
   return fruityvice_normalized
 
 def get_fruit_load_list():
-  whit my_cnx.cursor() as my_cur:
+  with my_cnx.cursor() as my_cur:
     my_cur.execute("SELECT * from fruit_load_list")
     return my_cur.fetchall()
  
 def insert_row_sbowflake(new_fruit):
-  whit my_cnx.cursor() as my_cur:
+  with my_cnx.cursor() as my_cur:
     my_cur.execute(f"insert into fruit_load_list values({new_fruit})")
     return "Thanks for adding " + new fruit
     
